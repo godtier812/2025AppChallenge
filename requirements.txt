@@ -12,3 +12,4 @@ google-generativeai
 opencv-python
 pdf2image
 python-multipart
+spacy
