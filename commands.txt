@@ -1,0 +1,19 @@
+source .venv/bin/activate
+
+fastapi dev main.py
+uvicorn backend:app --reload
+
+
+
+
+----USE WHEN IT BREAKS
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install --upgrade pip
+python3 -m pip install -r requirements.txt
+
+To push code--
+
+git add bert.py
+git commit -m "pushing the code"
+git push

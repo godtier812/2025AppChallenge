@@ -2,9 +2,10 @@ import scispacy
 import spacy
 
 # Load the SciSpacy model for chemicals and diseases
-nlp = spacy.load("en_ner_bc5cdr_md")
+
 
 def analyze_with_scispacy(text):
+    nlp = spacy.load("en_core_sci_md")
     doc = nlp(text)
     findings = []
     seen = set()
@@ -42,3 +43,8 @@ def analyze_with_scispacy(text):
 # Example
 text = "Patient shows signs of diabetes and moderate hypertension."
 print(analyze_with_scispacy(text))
+
+
+text = "Patient's glucose fasting level is 80."
+print(analyze_with_scispacy(text))
+

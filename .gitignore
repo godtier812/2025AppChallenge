@@ -1,0 +1,6 @@
+api_key.py
+.venv/
+.DS_Store
+__pycache__/
+.vscode/
+.DS_Store

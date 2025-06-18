@@ -8,16 +8,16 @@ model = genai.GenerativeModel("gemini-1.5-pro")
 
 BACKEND_URL = "http://localhost:8000/analyze/"
 
-st.set_page_config(page_title="Vital Analyzer", page_icon="🩻")
+st.set_page_config(page_title="Vital Analyzer")
 st.image("img.jpeg", width=150)
-st.title("🧠 Vital🩻Analyzer: Image + PDF + LLM Choice")
+st.title(" Vital Analyzer: Image + PDF + LLM Choice")
 st.subheader("Upload your medical file and pick a model to analyze it.")
 
 # Upload + Options
 uploaded_file = st.file_uploader("Upload a medical image or PDF", type=["jpg", "jpeg", "png", "pdf"])
 llm_model = st.selectbox("Choose Model", ["bert","gemini"])
 
-if st.button("🔍 Analyze"):
+if st.button("Analyze"):
     if uploaded_file:
         files = {"file": (uploaded_file.name, uploaded_file, uploaded_file.type)}
         data = {"model": llm_model,"mode":"summary"}
@@ -58,3 +58,4 @@ if st.button("🔍 Analyze"):
      #   r = st.session_state.chat.send_message(q)
      #   st.chat_message("user").write(q)
       #  st.chat_message("assistant").write(r.text)"""
+      
